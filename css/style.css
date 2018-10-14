@@ -51,14 +51,14 @@ header ul:first-child li:last-child a {
 
 header ul:last-child {
 	float: right;
-	margin-right: 2%;
+	margin-right: 20px;
 }
 
 header ul:last-child li a {
 	color: #FFF;
 	background-color: #665F5E;
 	border-radius: 50%;
-	margin-right: 50%;
+	margin-right: 20px;
 	padding: 8px 10px;
 }
 
@@ -383,5 +383,5 @@ footer p:nth-child(2) {
 	grid-column: 4/5;
 	color: #AA9F9D;
 	text-align: right;
-	margin-right: 5%;
+	margin-right: 20px;
 }
