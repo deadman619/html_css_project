@@ -9,9 +9,9 @@ html{
 
 body {
 	background-color: #FFF;
-	min-width: 900px;
 	max-width: 1500px;
 	margin: 0 auto;
+	padding: 0;
 	-webkit-box-shadow: 0px 0px 65px 1px rgba(0,0,0,0.56);
 	-moz-box-shadow: 0px 0px 65px 1px rgba(0,0,0,0.56);
 	box-shadow: 0px 0px 65px 1px rgba(0,0,0,0.56);
@@ -52,6 +52,7 @@ header ul:first-child li:last-child a {
 header ul:last-child {
 	float: right;
 	margin-right: 20px;
+	text-align: center;
 }
 
 header ul:last-child li a {
@@ -73,17 +74,19 @@ header ul:last-child li a i {
 /******************************************NAV BAR*****************************/
 
 navbar ul {
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
+	display: inline-block;
 	text-align: center;
-	width: 95%;
-	padding: 0;
-	margin-left: 30px;
+	width: 100%;
+  	padding-left: 30px;
+  	padding-right: 20px;
+  	margin-left: 0;
 }
 
 navbar ul li {
-	padding: 25px 0 10px 0px;
+	padding: 30px 0 30px 0;
+  	width: 12%;
 	border-bottom: 4px solid #AA9F9D;
+	float: left;
 }
 navbar ul li:hover {
 	border-bottom: 4px solid #33B2FF;
@@ -98,30 +101,33 @@ navbar ul li a:hover {
 }
 
 .bottomNavbar {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	margin: 30px 0 30px 0;
+	display: inline-block;
+	margin: 30px 0 30px 0px;
+	padding-right: 10px;
 	font-family: Calibri;
 	text-align: center;
+	width: 100%;
 }
+
 
 navbar .bottomNavbar div:first-child {
-	grid-column: 1/2;
-}
-
-navbar .bottomNavbar div:first-child p {
 	font-size: 0.8em;
 	color: #AA9F9D;
+	float: left;
+	margin-left: 50px;
 }
 
 navbar .bottomNavbar div:last-child {
-	grid-column: 3/5;
 	line-height: 3.5;
 	margin-left: 150px;
+	float: right;
+	margin-right: 50px;
 }
 navbar .bottomNavbar div:last-child input, navbar .bottomNavbar div:last-child button {
 	padding: 8px;
 	border-radius: 10px;
+	float: left;
+	margin-top: 10px;
 }
 navbar .bottomNavbar div:last-child input {
 	background-color: #eaeaea;
@@ -139,22 +145,21 @@ navbar .bottomNavbar div:last-child button:hover {
 
 /******************FIRST SECTION***************************/
 
-section:nth-child(3) {
+.sectionOne {
 	background-color: #F3F3F3;
 	height: 460px;
 	font-family: Calibri;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 }
-section:nth-child(3) div:nth-child(1) {
-	grid-column: 1/2;
+.sectionOne .firstChild {
 	top: 400px;
-	margin: auto auto;
+	margin: 80px auto;
+	margin-left: 100px;
 	font-size: 1.4em;
-	width: 70%;
+	width: 40%;
+	float: left;
 }
 
-section:nth-child(3) div:nth-child(1) a {
+.sectionOne .firstChild a {
 	background-color: #33B2FF;
 	padding: 8px;
 	border-radius: 10px;
@@ -163,20 +168,19 @@ section:nth-child(3) div:nth-child(1) a {
 	line-height: 4;
 }
 
-section:nth-child(3) div:nth-child(1) a:hover {
+.sectionOne .firstChild a:hover {
 	background-color: #B30011;
 }
 
-section:nth-child(3) div:nth-child(2) {
+.sectionOne .preImageRight {
 	margin: 0 auto;
+	float: right;
+  	padding-right: 30px;
 }
-
-section:nth-child(3) div:nth-child(2) .imageRight {
-	grid-column: 2/3;
+.sectionOne .preImageRight img{
 	display: inline-block;
-	background-image: url(https://loremflickr.com/550/440);
-	width: 550px;
-	height: 440px;
+	width: 100%;
+	height: auto;
 	background-color: #555;
 	margin: 10px auto;
 }
@@ -184,46 +188,50 @@ section:nth-child(3) div:nth-child(2) .imageRight {
 
 /******************SECOND SECTION***************************/
 
-section:nth-child(4) {
-	display: grid;
-	grid-column-gap: 30px;
-	grid-template-columns: 1fr 1fr;
+.secondSection {
 	background-color: #FFF;
 	font-family: Calibri;
 	text-align: center;
+	height: 480px;
 }
-section:nth-child(4) h2 {
+.secondSection h2 {
 	color: #33B2FF;
 }
 
-section:nth-child(4) div:nth-child(1) {
-	grid-column: 1/2;
-	margin-top: 10px;
-	margin-left: 30px;
+.secondSection .shillIcon {
+	margin-top: 50px;
+	padding-left: 30px;
+  	width: 550px;
+  	padding-right: 30px;
 }
 
-section:nth-child(4) div:nth-child(1) img {
-	width: auto;
+.secondSection .shillIcon img {
 	height: auto;
+	max-width: 550px;
+	width: 100%;
+  	float: left;
+  	margin-left: 150px;
 }
 
-section:nth-child(4) .articles {
+.secondSection .articles {
 	float: right;
-	margin: auto auto;
+	margin: 40px auto;
+	margin-right: 40px;
 	line-height: 1.2;
+	width: 40%;
 }
-section:nth-child(4) img {
+.secondSection img {
 	width: 85px;
 	height: 80px;
 	background-color: #555;
 }
-section:nth-child(4) article:nth-child(1), section:nth-child(4) article:nth-child(3) {
+.secondSection #first, .secondSection #third {
 	display: inline-block;
 	float: left;
 	width: 50%;
 	margin-top: 10px;
 }
-section:nth-child(4) article:nth-child(2), section:nth-child(4) article:nth-child(4) {
+.secondSection #second, .secondSection #fourth {
 	margin-top: 10px;
 }
 
@@ -237,19 +245,20 @@ section:nth-child(4) article:nth-child(2), section:nth-child(4) article:nth-chil
 	background-color: #F3F3F3;
 	line-height: 1;
 	font-family: Calibri;
+	border-left: 5px solid #33B2FF;
 }
 .leftContact {
-	display: inline-block;
-	border-left: 5px solid #33B2FF;
 	padding: 10px 0;
-	padding-left: 50px;
+	position: relative;
+	left: 50px;
+	float: left;
 }
 .leftContact h2 {
 	font-size: 2em;
 	margin-top: 10px;
 }
 .rightContact {
-	text-align: center;
+	display: inline-block;
 	margin-top: 20px;
 	float: right;
 }
@@ -261,6 +270,7 @@ section:nth-child(4) article:nth-child(2), section:nth-child(4) article:nth-chil
 	font-size: 2em;
 	padding: 8px 15px;
 	margin-right: 50px;
+	margin-left: -150px;
 	background-color: #33B2FF;
 }
 .rightContact a:hover {
@@ -269,72 +279,73 @@ section:nth-child(4) article:nth-child(2), section:nth-child(4) article:nth-chil
 
 /*****************THIRD SECTION*****************************/
 
-section:nth-child(6) {
+.thirdSection {
 	font-family: Calibri;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	float: left;
 	height: 500px;
 	background-color: #000;
 	line-height: 1.5;
 	width: 100%;
 }
-section:nth-child(6) h2 {
+.thirdSection h2 {
 	font-size: 0.8em;
 	color: #FFF;
 	padding-bottom: 15px;
 }
-section:nth-child(6) p, section:nth-child(6) h3 {
+.thirdSection p, section:nth-child(6) h3 {
 	color: #AA9F9D;
 }
-section:nth-child(6) div:nth-child(3) p:nth-child(3), 
-section:nth-child(6) div:nth-child(3) p:nth-child(4),
-section:nth-child(6) div:nth-child(3) p:nth-child(8),
-section:nth-child(6) div:nth-child(3) p:nth-child(9) {
+.thirdSection div:nth-child(3) p:nth-child(3), 
+.thirdSection div:nth-child(3) p:nth-child(4),
+.thirdSection div:nth-child(3) p:nth-child(8),
+.thirdSection div:nth-child(3) p:nth-child(9) {
 	font-size: 0.7em;
 }
-section:nth-child(6) div:nth-child(3) p:nth-child(5),
-section:nth-child(6) div:nth-child(3) p:nth-child(10) {
+.thirdSection div:nth-child(3) p:nth-child(5),
+.thirdSection div:nth-child(3) p:nth-child(10) {
 	margin-top: 10px;
 }
-section:nth-child(6) h3:nth-child(7) {
+.thirdSection h3:nth-child(7) {
 	margin-top: 20px;
 }
-section:nth-child(6) a {
+.thirdSection a {
 	color: #33B2FF;
 	float: right;
 	text-decoration: none;
 }
-section:nth-child(6) li a {
+.thirdSection li a {
 	float: none;
 }
-section:nth-child(6) a:hover{
+.thirdSection a:hover{
 	color: #B30011;
 }
 
-section:nth-child(6) li {
+.thirdSection li {
 	margin-left: -30px;
 }
-section:nth-child(6) li:not(:last-child) {
+.thirdSection li:not(:last-child) {
 	border-bottom: 1px solid #232323;
 }
-section:nth-child(6) img {
+.thirdSection img {
 	width: 215px;
 	height: 90px;
 	padding: 3px;
 	border: 1px solid #AA9F9D;
 }
 
-section:nth-child(6) li::before {
+.thirdSection li::before {
 	content: ">> ";
 	color: #AA9F9D;
 	font-size: 0.8em;
 }
 
-section:nth-child(6) div{
+.thirdSection div{
 	margin-top: 50px;
 	padding-left: 30px;
+	float: left;
+	width: 24%;
 }
-section:nth-child(6) div:nth-child(4) input, section:nth-child(6) div:nth-child(4) textarea  {
+.thirdSection div:nth-child(4) input, .thirdSection div:nth-child(4) textarea  {
 	width: 90%;
 	height: 20px;
 	margin-top: 5px;
@@ -344,44 +355,273 @@ section:nth-child(6) div:nth-child(4) input, section:nth-child(6) div:nth-child(
 	border-radius: 7px;
 }
 
-section:nth-child(6) div:nth-child(4) textarea {
+.thirdSection div:nth-child(4) textarea {
 	margin-top: 5px;
 	height: 100px;
+	resize: none;
 }
 
-section:nth-child(6) div:nth-child(4) button {
+.thirdSection div:nth-child(4) button {
 	padding: 8px;
 	background-color: #33B2FF;
 	border-radius: 7px;
 	color: white;
 	border: 0;
 }
-section:nth-child(6) div:nth-child(4) button:hover{
+.thirdSection div:nth-child(4) button:hover{
 	background-color: #B30011;
 	cursor: pointer;
 }
 /*********************FOOTER*********************************/
 
 footer {
+	display: inline-block;
 	font-family: Raleway, Calibri;
 	font-size: 0.8em;
 	border-top: 1px solid #AA9F9D;
-	height: 80px;
+	height: 90px;
+	width: 100%;
 	background-color: #232323;
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
 	padding-top: 30px;
+	margin-bottom: -10px;
 }
 footer p:nth-child(1) {
-	grid-column: 1/3;
 	color: #AA9F9D;
 	vertical-align: middle;
 	margin-left: 30px;
+	float: left;
 }
 footer p:nth-child(2) {
-	grid-column: 4/5;
 	color: #AA9F9D;
 	text-align: right;
 	margin-right: 20px;
+	float: right;
+}
+
+/***********************R E S P O N S I V E******************/
+
+@media (min-width: 300px) and (max-width: 1200px) {
+	body {
+		margin: 0;
+		padding: 0;
+		min-width: 300px;
+	}
+
+	/*****HEADER******/
+
+	header {
+		margin: 0;
+		padding: 0;
+	}
+	header ul {
+		margin: 0 auto;
+		padding: 0;
+		background-color: #000;
+	}
+	header ul:first-child li {
+		width: 100%;
+		text-align: center;
+		background-color: #000;
+		margin: 0 auto;
+	}
+	header ul:first-child li a{
+		border: none;
+	}
+	header ul:last-child {
+		width: 100%;
+		margin: 0 auto;
+		padding-left: 10px;
+	}
+	header ul:last-child li {
+		background-color: #000;
+		width: 20%;
+		margin: 0 auto;
+	}
+
+	/*****NAV BAR******/
+
+	navbar {
+		width: 100%;
+	}
+	navbar ul {
+		padding: 15px;
+		float: none;
+	}
+	navbar ul a li{
+		width: 100%;
+	}
+	navbar .bottomNavbar {
+		text-align: center;
+		width: 100%;
+	}
+	navbar .bottomNavbar div:first-child {
+		display: block;
+		margin: 0 auto;
+		float: none;
+	}
+	navbar .bottomNavbar div:last-child {
+		float: none;
+    	position: absolute
+		display: block;
+		width: 100%;
+    	margin-left: 15%;
+	}
+	navbar .bottomNavbar div:last-child input {
+		width: 70%;
+	}
+  	navbar .bottomNavbar div:last-child button {
+    	position: relative;
+   		margin: 10px auto;
+    	right: 50px;
+  	}
+
+	/*********FIRST SECTION***********/
+
+	.sectionOne {
+		height: auto;
+		overflow: hidden;
+	}
+	.sectionOne .firstChild {
+		display: block;
+		width: 80%;
+		font-size: 1em;
+		margin-left: 10%;
+		text-align: center;
+	}
+  .sectionOne .preImageRight {
+	    margin: 0 auto;
+	    width: 100%;
+	    text-align: center;
+	}
+	.sectionOne .preImageRight img {
+		float: none;
+    	margin-left: 15px;
+    	max-width: 550px;
+	}
+
+	/********SECOND SECTION**************/
+
+
+	.secondSection{
+		height: auto;
+		overflow: hidden;
+		margin-bottom: 50px;
+	}
+	.secondSection .shillIcon {
+    	max-width: 100%;
+    	margin: 0 auto;
+    	width: 100%;
+    	text-align: center;
+		margin-top: 10px;
+		float: none;
+	}
+	.secondSection .shillIcon img {
+		float: none;
+    	height: auto;
+		width: 100%;
+		max-width: 320px;
+    	margin-left: 15px;
+	}
+	.secondSection .articles {
+		float: none;
+		margin: 40px auto;
+		line-height: 1.2;
+		width: 80%;
+	}
+	.secondSection img {
+		width: 85px;
+		height: 80px;
+		background-color: #555;
+	}
+	.secondSection #first, .secondSection #third {
+		display: inline-block;
+		float: none;
+		width: 100%;
+		margin-top: 10px;
+	}
+	.secondSection #second, .secondSection #fourth {
+		margin-top: 10px;
+	}
+
+	/***********CONTACT US***********************/
+
+	.contact {
+		height: auto;
+		overflow: hidden;
+		width: 95%;
+		margin: 20px auto;
+		background-color: #F3F3F3;
+		line-height: 1;
+		font-family: Calibri;
+		border-left: 5px solid #33B2FF;
+	}
+	.leftContact {
+		text-align: center;
+		display: inline-block;
+		width: 95%;
+		padding: 10px 0;
+		position: relative;
+		left: 10px;
+	}
+	.leftContact h2 {
+		font-size: 2em;
+		margin-top: 10px;
+	}
+	.rightContact {
+		display: inline-block;
+		width: 100%;
+		margin-top: 30px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.rightContact a {
+		display: inline-block;
+		color: #F3F3F3;
+		text-decoration: none;
+		border-radius: 25px;
+		font-size: 2em;
+		padding: 8px 15px;
+		margin-right: 30px;
+		margin-left: 30px;
+		background-color: #33B2FF;
+	}
+	.rightContact a:hover {
+		background-color: #B30011;
+	}
+
+	/*************THIRD SECTION***********************/
+
+	.thirdSection {
+		height: auto;
+		overflow: hidden;
+		padding-bottom: 10px;
+	}
+
+	.thirdSection div {
+		float: none;
+		display: block;
+		line-height: 1.5;
+		width: 100%;
+		padding-right: 10px;
+		padding-left: 15px;
+	}
+
+	/*************FOOTER***********************/
+
+	footer {
+		height: auto;
+		overflow: hidden;
+		width: 100%;
+	}
+	footer p:first-child {
+		float: none;
+		text-align: center;
+		margin: 0;
+	}
+	footer p:last-child {
+		float: none;
+		text-align: center;
+		margin: 0;
+	}
 }
